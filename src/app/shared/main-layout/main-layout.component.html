@@ -1,0 +1,33 @@
+<nav class="navbar bg-danger">
+  <h2 class="logo">
+    <i class="fas fa-laptop"></i>
+    <span class="ml-10">Ng Online Shop</span>
+  </h2>
+  <ul>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/cart']">
+        <i class="fas fa-mobile-alt"></i>
+        Phone
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/cart']">
+        <i class="fas fa-tablet-alt"></i>
+        Tablet
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/cart']">
+        <i class="fas fa-laptop"></i>
+        Laptop
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/cart']">
+        <i class="fas fa-cart-arrow-down"></i>
+        Cart
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
