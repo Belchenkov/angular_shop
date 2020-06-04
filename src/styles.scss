@@ -285,3 +285,18 @@ table th {
 .ml-10 {
   margin-left: 10px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.navbar {
+  text-shadow: 0 0 5px #000000;
+  font-family: 'Abril Fatface', cursive;
+
+  a ul li a i {
+    margin-right: 5px;
+  }
+
+  & > .logo {
+    font-family: 'Abril Fatface', cursive;
+  }
+}
