@@ -9,6 +9,7 @@ import { AddPageComponent } from './add-page/add-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { OrdersPageComponent } from './orders-page/orders-page.component';
+import { AuthGuard } from "../shared/auth.guard";
 
 @NgModule({
   declarations: [
@@ -33,16 +34,16 @@ import { OrdersPageComponent } from './orders-page/orders-page.component';
             path: 'login', component: LoginPageComponent
           },
           {
-            path: 'dashboard', component: DashboardComponent
+            path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]
           },
           {
-            path: 'add', component: AddPageComponent
+            path: 'add', component: AddPageComponent, canActivate: [AuthGuard]
           },
           {
-            path: 'orders', component: OrdersPageComponent
+            path: 'orders', component: OrdersPageComponent, canActivate: [AuthGuard]
           },
           {
-            path: 'product/:id/edit', component: EditPageComponent
+            path: 'product/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]
           }
         ]
       }
