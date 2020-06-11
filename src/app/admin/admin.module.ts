@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { QuillModule } from "ngx-quill";
 
 import { AdminLayoutComponent } from './shared/admin-layout/admin-layout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -24,6 +25,7 @@ import { AuthGuard } from "../shared/auth.guard";
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    QuillModule.forRoot(),
     RouterModule.forChild([
       {
         path: '', component: AdminLayoutComponent, children: [
