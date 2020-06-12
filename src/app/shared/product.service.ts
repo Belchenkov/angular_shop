@@ -24,4 +24,16 @@ export class ProductService {
         }
       }));
   }
+
+  getAll() {
+    return this.http.get(`${environment.FB_URL}/products.json`)
+      .pipe(map((res: FbResponse) => {
+        return Object.keys(res)
+          .map(key => ({
+            ...res[key],
+            id: key,
+            date: new Date(res[key].date)
+          }))
+      }));
+  }
 }
