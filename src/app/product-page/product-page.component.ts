@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import { Observable } from "rxjs";
+
+import { ProductService } from "../shared/product.service";
+import { Product } from "../shared/interfaces";
+import { switchMap } from "rxjs/operators";
 
 @Component({
   selector: 'app-product-page',
@@ -6,10 +12,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-page.component.scss']
 })
 export class ProductPageComponent implements OnInit {
+  product$: Observable<Product>;
 
-  constructor() { }
+  constructor(
+    private productService: ProductService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.product$ = this.route.params
+      .pipe(switchMap(params => {
+        return this.productService.getById(params['id']);
+      }))
   }
 
 }
