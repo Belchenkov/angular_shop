@@ -42,7 +42,7 @@ export class ProductService {
       .pipe(map((res: Product) => {
         return {
             ...res,
-            id: res.id,
+            id,
             date: new Date(res.date)
           }
       }));
@@ -53,6 +53,7 @@ export class ProductService {
   }
 
   update(product: Product) {
+    console.log(product)
     return this.http.patch(`${environment.FB_URL}/products/${product.id}.json`, product);
   }
 }
