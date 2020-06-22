@@ -11,29 +11,33 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { AuthInterceptor } from "./shared/auth.interceptor";
 import { ProductComponent } from './product/product.component';
+import { SortingPipe } from './shared/sorting.pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainLayoutComponent,
-    MainPageComponent,
-    ProductPageComponent,
-    CartPageComponent,
-    ProductComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    QuillModule.forRoot(),
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      multi: true,
-      useClass: AuthInterceptor
-    }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MainLayoutComponent,
+        MainPageComponent,
+        ProductPageComponent,
+        CartPageComponent,
+        ProductComponent,
+        SortingPipe
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        QuillModule.forRoot(),
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            multi: true,
+            useClass: AuthInterceptor
+        }
+    ],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

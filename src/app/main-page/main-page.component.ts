@@ -11,11 +11,10 @@ export class MainPageComponent implements OnInit {
   products$;
 
   constructor(
-    private productService: ProductService
+    public productService: ProductService
   ) { }
 
   ngOnInit() {
     this.products$ = this.productService.getAll();
   }
-
 }

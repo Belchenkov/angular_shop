@@ -5,25 +5,25 @@
   </h2>
   <ul>
     <li routerLinkActive="active">
-      <a [routerLink]="['/cart']">
+      <a (click)="setType('Phone')">
         <i class="fas fa-mobile-alt"></i>
         Phone
       </a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/cart']">
+      <a (click)="setType('Tablet')">
         <i class="fas fa-tablet-alt"></i>
         Tablet
       </a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/cart']">
+      <a (click)="setType('Laptop')">
         <i class="fas fa-laptop"></i>
         Laptop
       </a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/cart']">
+      <a (click)="setType('Cart')">
         <i class="fas fa-cart-arrow-down"></i>
         Cart
       </a>
