@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from "rxjs";
 
 import { ProductService } from "../../shared/product.service";
-import {Product} from "../../shared/interfaces";
+import { Product } from "../../shared/interfaces";
 
 @Component({
   selector: 'app-dashboard',
@@ -11,6 +11,7 @@ import {Product} from "../../shared/interfaces";
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   products: Product[] = [];
+  productName = '';
   pSub: Subscription;
   rSub: Subscription;
 
