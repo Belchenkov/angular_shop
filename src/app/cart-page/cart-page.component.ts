@@ -59,4 +59,9 @@ export class CartPageComponent implements OnInit {
     });
   }
 
+  delete(product) {
+    this.totalPrice -= +product.price;
+    this.cartProducts.splice(this.cartProducts.indexOf(product), 1);
+  }
+
 }
