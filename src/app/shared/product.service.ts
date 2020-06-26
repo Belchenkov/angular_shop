@@ -39,6 +39,10 @@ export class ProductService {
       }));
   }
 
+  remove(id) {
+    return this.http.delete(`${environment.FB_URL}/products/${id}.json`);
+  }
+
   getById(id) {
     return this.http.get(`${environment.FB_URL}/products/${id}.json`)
       .pipe(map((res: Product) => {
@@ -50,9 +54,6 @@ export class ProductService {
       }));
   }
 
-  remove(id) {
-    return this.http.delete(`${environment.FB_URL}/products/${id}.json`);
-  }
 
   update(product: Product) {
     console.log(product)
