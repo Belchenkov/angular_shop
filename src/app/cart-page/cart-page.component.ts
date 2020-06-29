@@ -15,6 +15,7 @@ export class CartPageComponent implements OnInit {
   totalPrice = 0;
   form: FormGroup;
   submitted = false;
+  added = '';
 
   constructor(
     public productService: ProductService,
@@ -56,6 +57,7 @@ export class CartPageComponent implements OnInit {
     this.orderService.create(order).subscribe(res => {
       this.form.reset();
       this.submitted = false;
+      this.added = 'Delivery is complete';
     });
   }
 

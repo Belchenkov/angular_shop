@@ -25,8 +25,8 @@ export class OrderService {
       }));
   }
 
-  /*getAll() {
-    return this.http.get(`${environment.FB_URL}/products.json`)
+  getAll() {
+    return this.http.get(`${environment.FB_URL}/orders.json`)
       .pipe(map((res: FbResponse) => {
         return Object.keys(res)
           .map(key => ({
@@ -38,6 +38,6 @@ export class OrderService {
   }
 
   remove(id) {
-    return this.http.delete(`${environment.FB_URL}/products/${id}.json`);
-  }*/
+    return this.http.delete(`${environment.FB_URL}/orders/${id}.json`);
+  }
 }
