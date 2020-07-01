@@ -10,6 +10,7 @@ import { FbResponse, Product } from "./interfaces";
 })
 export class ProductService {
   type = 'phone';
+  cartProducts: Product[] = [];
 
   constructor(
     private http: HttpClient
@@ -38,6 +39,10 @@ export class ProductService {
       }));
   }
 
+  remove(id) {
+    return this.http.delete(`${environment.FB_URL}/products/${id}.json`);
+  }
+
   getById(id) {
     return this.http.get(`${environment.FB_URL}/products/${id}.json`)
       .pipe(map((res: Product) => {
@@ -49,9 +54,6 @@ export class ProductService {
       }));
   }
 
-  remove(id) {
-    return this.http.delete(`${environment.FB_URL}/products/${id}.json`);
-  }
 
   update(product: Product) {
     console.log(product)
@@ -60,5 +62,9 @@ export class ProductService {
 
   setType(type: string) {
     this.type = type;
+  }
+
+  addProduct(product: Product) {
+    this.cartProducts.push(product);
   }
 }

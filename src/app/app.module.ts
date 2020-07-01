@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { QuillModule } from "ngx-quill";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,8 @@ import { SortingPipe } from './shared/sorting.pipe';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
         QuillModule.forRoot(),
     ],
     providers: [
