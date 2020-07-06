@@ -8,10 +8,16 @@
   <button
     [routerLink]="['/product', product.id]"
     class="btn btn-dark"
-  >Open</button>
+  >
+    <i class="fas fa-external-link-alt"></i>
+    Open
+  </button>
   <button
-    class="btn btn-dark"
+    class="btn btn-success"
     [routerLink]="['/cart']"
     (click)="addProduct(product)"
-  >Add to Cart</button>
+  >
+    <i class="fas fa-cart-arrow-down"></i>
+    Add to Cart
+  </button>
 </div>

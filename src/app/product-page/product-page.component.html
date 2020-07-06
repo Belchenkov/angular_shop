@@ -1,6 +1,12 @@
 <div *ngIf="product$ | async as product; else loading">
   <div class="product">
-    <button routerLink="/" class="btn btn-dark btn-back">Back</button>
+    <button
+      routerLink="/"
+      class="btn btn-dark btn-back"
+    >
+      <i class="fas fa-undo-alt"></i>
+      Back
+    </button>
     <div class="header">
       <div class="flex">
         <div class="item text-center">
@@ -14,10 +20,11 @@
             <h2>Price: {{ product.price | currency:'RUB':'symbol-narrow' }}</h2>
 
             <button
-              class="btn btn-dark"
+              class="btn btn-success"
               [routerLink]="['/cart']"
               (click)="addProduct(product)"
             >
+              <i class="fas fa-cart-arrow-down"></i>
               Add to cart
             </button>
           </div>

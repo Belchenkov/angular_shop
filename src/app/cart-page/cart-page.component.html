@@ -7,14 +7,20 @@
         <td>{{ cartProduct.type }}</td>
         <td>{{ cartProduct.title }}</td>
         <td>
-          <button class="btn btn-danger" (click)="delete(cartProduct)">Delete</button>
+          <button
+            class="btn btn-danger"
+            (click)="delete(cartProduct)"
+          >
+            <i class="far fa-trash-alt"></i>
+            Delete
+          </button>
         </td>
         <td>{{ cartProduct.price | currency:'RUB':'symbol-narrow' }}</td>
       </tr>
     </tbody>
   </table>
   <hr>
-  <strong class="right">Total: {{ totalPrice }}</strong>
+  <strong class="right">Total: {{ totalPrice | currency:'RUB':'symbol-narrow' }}</strong>
 
   <h2 class="text-center">Delivery:</h2>
 
@@ -65,7 +71,7 @@
       class="btn btn-success btn-block"
       [disabled]="form.invalid || submitted"
     >
-      <i class="fas fa-plus"></i>
+      <i class="fab fa-paypal"></i>
       Pay
     </button>
   </form>
