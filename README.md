@@ -1,6 +1,8 @@
-# Angular Shop
+# Angular Online Shop
 
 > Build online shop using Angular 9
+
+### [Demo](https://angular-shop-d56d6.web.app/)
 
 # Development server
 

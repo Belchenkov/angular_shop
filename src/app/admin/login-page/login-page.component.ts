@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 import { AuthService } from "../../shared/auth.service";
 import { User } from "../../shared/user";
-import {finalize} from "rxjs/operators";
 
 @Component({
   selector: 'app-login-page',
@@ -33,7 +32,7 @@ export class LoginPageComponent implements OnInit {
     })
   }
 
-  submit(form: Form) {
+    submit() {
     if (this.form.invalid) {
       return;
     }
