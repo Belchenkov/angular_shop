@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "~quill/dist/quill.snow.css";
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
 
 :root {
   --primary-color: #000000;
@@ -15,11 +16,35 @@
   padding: 0;
 }
 
+body,
+input,
+textarea,
+select {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+input,
+select {
+  border-radius: 4px;
+}
+
+
+.navbar {
+  text-shadow: 0 0 5px #000000;
+  font-family: 'Abril Fatface', cursive;
+
+  a ul li a i {
+    margin-right: 5px;
+  }
+
+  & > .logo {
+    font-family: 'Abril Fatface', cursive;
+  }
+}
 body {
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background: #fff;
   color: #333;
 }
 
@@ -289,19 +314,4 @@ table th {
 
 .mb-10 {
   margin-bottom: 10px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
-.navbar {
-  text-shadow: 0 0 5px #000000;
-  font-family: 'Abril Fatface', cursive;
-
-  a ul li a i {
-    margin-right: 5px;
-  }
-
-  & > .logo {
-    font-family: 'Abril Fatface', cursive;
-  }
 }

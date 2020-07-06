@@ -29,7 +29,7 @@ export class ProductService {
 
   getAll() {
     return this.http.get(`${environment.FB_URL}/products.json`)
-      .pipe(map((res: FbResponse) => {
+      .pipe(map(res => {
         return Object.keys(res)
           .map(key => ({
             ...res[key],
